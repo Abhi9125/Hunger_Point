@@ -432,3 +432,5 @@ At the end, Akshay shares his thoughts about Redux.
 - 03:22:13 – Test for “top-rated restaurants list”
 - 03:27:15 – beforeAll(()), beforeEach(()) , afterAll(()), afterEach(())
 - 03:32:25 – Integration Testing of adding a item to cart
+#   H u n g e r _ P o i n t  
+ 
