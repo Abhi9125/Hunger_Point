@@ -64,7 +64,6 @@ const HeaderCom = () => {
             {btnNameReact}
           </button>
           {/* Read the value of UserContext */}
-          <li>UserName:{contextData.loggedInUser}</li>
         </ul>
       </div>
     </header>

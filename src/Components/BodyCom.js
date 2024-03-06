@@ -100,11 +100,6 @@ const BodyCom = () => {
         >
           Top Rated Resturant
         </button>
-        <input
-          className="border border-black"
-          value={loggedInUser}
-          onChange={(e) => setUserName(e.target.value)}
-        />
       </div>
       <div className="flex flex-wrap justify-evenly">
         {
