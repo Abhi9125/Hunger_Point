@@ -22,7 +22,7 @@ const AppContainer = () => {
 
   // Get user data after the authentication
   React.useEffect(() => {
-    data = {
+    const data = {
       name: "Abhishek Singh",
     };
     setUserName(data.name);
@@ -37,7 +37,8 @@ const AppContainer = () => {
       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         <div className="font-sans text-sm bg-gray-100 min-h-screen">
           <HeaderCom />
-          {/* I want when path is "/about" below <About/> render ho. agr "/contact" to below <Contact/ component render ho same for other header Component> */}
+          {/* I want when path is "/about" below <About/> render ho. agr "/contact" to below 
+          <Contact/ component render ho same for other header Component> */}
           {/* So for above functionality we use Outlet component and Children routing. */}
           <Outlet />
         </div>
