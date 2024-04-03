@@ -17,11 +17,12 @@ const RestaurantsMenu = () => {
 
   if (resItems === "") return <Shimmer />;
 
+  console.log(resItems);
   // Destructuring
   const { name, cuisines, areaName, avgRatingString, totalRatingsString } =
-    resItems?.data?.cards[0]?.card?.card?.info;
+    resItems?.data?.cards[2]?.card?.card?.info;
 
-  const { lastMileTravel } = resItems?.data?.cards[0]?.card?.card?.info?.sla;
+  const { lastMileTravel } = resItems?.data?.cards[2]?.card?.card?.info?.sla;
 
   // const { title, itemCards } =
   //   resItems.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
@@ -31,7 +32,7 @@ const RestaurantsMenu = () => {
 
   // Filtring the different category Items like reccomended, other things
   const itemCategory =
-    resItems.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards.filter(
+    resItems.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter(
       (items) =>
         items?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
