@@ -4,7 +4,7 @@ import { useRouteError } from "react-router-dom";
 const Error = () => {
   // useRouterError return an Object.
   const errorObj = useRouteError();
-  console.log(errorObj);
+  // console.log(errorObj);
   return (
     <div className="m-4">
       <h1 className="font-bold">Oppssss!!!!!!</h1>

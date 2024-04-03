@@ -20,7 +20,7 @@ const BodyCom = () => {
   const OffersOnRes = Offers(RescartCom);
 
   // Whenever state variable is change react reconciliation(re-render it).
-  console.log("Rendered Every Change");
+  // console.log("Rendered Every Change");
 
   const { loggedInUser, setUserName } = useContext(UserContext);
 
@@ -34,11 +34,11 @@ const BodyCom = () => {
   const fetchData = async () => {
     const res = await fetch(Restaurants_API);
     const Jsondata = await res.json();
-    console.log(Jsondata);
-    console.log(
-      Jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants
-    );
+    // console.log(Jsondata);
+    // console.log(
+    //   Jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+    //     ?.restaurants
+    // );
     //Update the Resturants that come from API.
     setListOFResturant(
       Jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -92,7 +92,7 @@ const BodyCom = () => {
             const filteredList = ListOFResturant.filter(
               (res) => res.info.avgRating > 4.2
             );
-            console.log(filteredList);
+            // console.log(filteredList);
             // Fix the problem.
             // update serchres bcz res card render that compont below.
             setSearchRes(filteredList);

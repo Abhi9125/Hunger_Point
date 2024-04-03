@@ -5,13 +5,13 @@ const User = ({ name, Location }) => {
   const [count2] = useState(2);
   useEffect(() => {
     const timer = setInterval(() => {
-      console.log("Massing the things in functional Componet");
+      // console.log("Massing the things in functional Componet");
     }, 1000);
 
     // Unmounting here. when we go one page to diffrent page the setInterval will stop
     return () => {
       clearInterval(timer);
-      console.log("Unmounting the funtional component");
+      // console.log("Unmounting the funtional component");
     };
   }, []);
   return (

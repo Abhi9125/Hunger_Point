@@ -1,4 +1,3 @@
-import User from "./User";
 // we also destructure the Component onfly.
 import { Component } from "react";
 import UserClass from "./UserClass";
@@ -8,8 +7,6 @@ import UserContext from "../utility/UserContext";
 class About extends Component {
   constructor(props) {
     super(props);
-
-    // console.log("Parent Constructure");
   }
 
   // Use of componentDidMount for fetching the API work same as Class Base component.
@@ -36,34 +33,4 @@ class About extends Component {
     );
   }
 }
-/****
- *Expected Output--
- * Parent Constructor
- * Parent Render
- * First Child class Constroctor
- * First child render
- * First Child class didMount
- * Second Child class Constroctor
- * Second child render
- * Second Child class didMount
- * Parent didMount.
- */
-
-/*****
-  * But Actual Output is below, 
- * Parent Constructor
- * Parent Render
- * First Child class Constroctor 
- * First child render 
- * Second Child class Constroctor 
- * Second child render
- * Third Child class Constroctor 
- * Third child render
- * First Child class didMount 
- * Second Child class didMount
- * Third Child class didMount 
- * Parent didMount.
- * OutPut come this order bcz of Life Cycle of class Componetn - it hadden in two phase (1) -- Render() phase, (2) -- Commit Phase. 
- 
- */
 export default About;
